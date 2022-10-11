@@ -50,7 +50,7 @@ def getIntersection(list1,list2):
     # return a list of numbers that is in both lists
     # the intersection of the 2 number sets
     common = []
-
+    
     return common
 
 def getUnion(list1,list2):
@@ -82,7 +82,7 @@ def main():
     #getIntegers(numbers1)
     #getFactor(easy1,2)
     #getNegatives(easy2)
-
+    getIntersection(numbers1,numbers2)
 
 if __name__ == "__main__":
     main()
