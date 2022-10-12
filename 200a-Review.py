@@ -49,8 +49,7 @@ def getIntersection(list1,list2):
     # list 2: expected list or tuple
     # return a list of numbers that is in both lists
     # the intersection of the 2 number sets
-    common = []
-    
+    common=list(set(list1) & set(list2))
     return common
 
 def getUnion(list1,list2):
@@ -59,8 +58,8 @@ def getUnion(list1,list2):
     # return a list of numbers that is in either of the lists
     # the union of the 2 number sets
     union = []
-
-    return union   
+    union= list1 + list2
+    return union  
 
 def getMerge(list1,list2):
     # list 1: expected list or tuple
@@ -68,8 +67,12 @@ def getMerge(list1,list2):
     # add the elements of list2 into list1
     # if the list2 element is in list1, add it at the position where it occurs in list1
     # if the list2 element is not in list1, add it to the end
-    merge = list.copy()
-
+    
+    
+    rem=list(set(list1) & set(list2))
+    list2comp=[x for x in list2 if x not in rem]
+    list1=list1+list2comp
+    merge = list.copy(list1)
     return merge
 
 
@@ -82,7 +85,8 @@ def main():
     #getIntegers(numbers1)
     #getFactor(easy1,2)
     #getNegatives(easy2)
-    getIntersection(numbers1,numbers2)
-
+    #getIntersection(numbers1,numbers2)
+    #getUnion(numbers1,numbers2)
+    getMerge(numbers1,numbers2)
 if __name__ == "__main__":
     main()
