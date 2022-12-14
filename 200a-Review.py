@@ -82,11 +82,11 @@ def main():
     
     numbers1 = [3,5,8,12,11,19,10,7,2,15,25,34,16,32,50,60,100,-3,0.25]
     numbers2 = [3,7,11,15,19,23,27,31,35,39,44,50]
-    #getIntegers(numbers1)
-    #getFactor(easy1,2)
-    #getNegatives(easy2)
-    #getIntersection(numbers1,numbers2)
-    #getUnion(numbers1,numbers2)
+    getIntegers(numbers1)
+    getFactor(easy1,2)
+    getNegatives(easy2)
+    getIntersection(numbers1,numbers2)
+    getUnion(numbers1,numbers2)
     getMerge(numbers1,numbers2)
 if __name__ == "__main__":
     main()
